@@ -1,0 +1,22 @@
+<%- include('header') %>
+
+<h1>Activity Log</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Student ID</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% logs.forEach(function(log) { %>
+            <tr>
+                <td><%= log.action %></td>
+                <td><%= log.studentId %></td>
+                <td><%= log.timestamp %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('footer') %>
